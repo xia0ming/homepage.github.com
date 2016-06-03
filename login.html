@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Welcome to login!</title>
+		<link rel="stylesheet" href="styles/login.css">
+		<link rel="stylesheet" href="styles/reset.css">
+		<link rel="stylesheet" href="styles/font-awesome.min.css">
+		<link rel="stylesheet" href="styles/font-animation.css">
+	</head>
+	<body>
+		<div class="logo_box">
+			<img src="images/logo.png" height="112" width="600" alt="email to xia0ming">
+			<span>Designed.</span>
+		</div>
+		<div class="login_box">
+			<form action="login.php" method="POST" name="login">
+				<ul class="login_content">
+					<li>
+						<span class="login_anno">&#47;&#47;Welcome to xia0ming&#39;s website &#58;&#41;</span>
+					</li>
+					<li><span class="login_anno">&#47;&#47;May I have your login details &#63;</span></li>
+					<li><span class="login_code">function loginPage&#40;&#41; &#123;</span></li>
+					<li><span class="login_code"></span></li>
+					<li>
+						<span class="login_code code_inside">echo &#39;&lt;form action=&#34;doLogin.php&#34; method=&#34;post&#34;&gt;</span>
+					</li>
+					<li>
+						<span class="login_code code_inside">&lt;input type=&#34;text&#34; name=&#34;</span>
+						<span class="login_code code_highlight">username</span>
+						<span class="login_code">&#34; value=&#34;</span>
+						<input type="text" name="username" class="login_input"/>
+						<span class="login_code">&#34;/&gt;</span>
+					</li>
+					<li>
+						<span class="login_code code_inside">&lt;input type=&#34;password&#34; name=&#34;</span>
+						<span class="login_code code_highlight">password</span>
+						<span class="login_code">&#34; value=&#34;</span>
+						<input type="password" name="password" class="login_input"/>
+						<span class="login_code">"/&gt;</span>
+					</li>
+					<li>
+						<span class="login_code code_inside">&lt;input type=&#34;text&#34; name=&#34;</span>
+						<span class="login_code code_highlight">verifyCode</span>
+						<span class="login_code">&#34; value=&#34;</span>
+						<input type="text" name="verifycode" class="login_verify"/>
+						<span class="login_code">&#34;/&gt;</span>
+						<span class="login_code">&lt;img src=&#34;</span>
+						<img class="img_verify" src="verify.php?r=<?php echo rand();?>" alt="verifyCode">
+						<span class="login_code">&#34;/&gt;</span>
+					</li>
+					<li>
+						<span class="login_code code_inside">&lt;input type=&#34;checkbox&#34; name=&#34;</span>
+						<span class="login_code code_highlight">rememberMe</span>
+						<span class="login_code">&#34; value=&#34;</span>
+						<div class="login_checkbox">
+						   <input type="checkbox" value="None" id="login_checkbox" name="check" />
+						   <label for="login_checkbox"></label>
+						</div>
+						<span class="login_code">&#34;/&gt;</span>
+					</li>
+					<li>
+						<span class="login_code code_inside">&lt;input type=&#34;submit&#34;</span>
+						<span class="login_code"> value=&#34;</span>
+						<input type="submit" value="Login" class="login_submit">
+						<span class="login_code">&#34;/&gt;</span>
+						<div class="login_error"></div>
+					</li>
+					<li>
+						<span class="login_code code_inside">
+							&lt;form/&gt;&#39;;
+						</span>
+					</li>
+					<li>
+						<span class="login_code">
+							&#125;
+						</span>
+					</li>
+					<li>
+						<span class="login_code">&lt;a onclick=&#34;</span>
+						<span class="login_code span_signup">
+							signUp&#40;&#41;
+						</span>
+						<span class="login_code">"/&gt;</span>
+						<span class="login_anno code_inside">&#47;&#47;U may need this when u don&#39;t have an account :&#41;</span>
+					</li>
+				</ul>
+			</form>
+		</div>
+		<div class="signUp_box">
+			<form action="signUp.php" method="POST" name="signUp">
+				<ul class="signUp_content">
+					<li>
+						<span class="signUp_item">USERNAME</span>
+						<div class="input_box">
+							<input type="text"/ id="user_name">
+						</div>
+					</li>
+					<li>
+						<span class="signUp_item">EMAIL</span>
+						<div class="input_box">
+							<input type="email"/ id="email">
+						</div>
+					</li>
+					<li>
+						<span class="signUp_item">PASSWORD</span>
+						<div class="input_box">
+							<input type="password"/ id="password">
+						</div>
+					</li>
+					<li>
+						<span class="signUp_item">CONFIRM PASSWORD</span>
+						<div class="input_box">
+							<input type="password"/ id="confirm_password">
+						</div>
+					</li>
+					<li>
+						<div class="input_box" id="signupverify">
+							<input type="text"/>
+						</div>
+						<img src="verify.php?r=<?php echo rand();?>" alt="verifycode">
+					</li>
+					<li>
+						<span id="errormsg" class="opacity0"></span>
+						<div class="signUpBtn">
+							<a href="#">sign up now </a><i class="fa fa-exclamation faa-ring animated"></i>
+						</div>
+					</li>
+				</ul>
+				<div class="backtologin faa-horizontal animated-hover">
+					<img src="images/signback.svg" alt="back to login">
+				</div>
+			</form><!-- 
+		 --><div class="head_png">
+		 	<img src="images/head.png" alt="">
+		 </div>
+		</div>
+		<script src="javascript/jquery-2.1.4.min.js"></script>
+		<script src="javascript/login.js"></script>
+	</body>
+</html>

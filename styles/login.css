@@ -1,0 +1,352 @@
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+@font-face{
+	font-family: HaloHandletter;
+	src: url(../fonts/HaloHandletter.ttf);
+}
+@font-face{
+	font-family: JimbosPrint;
+	src: url(../fonts/JimbosPrint-Bold-Italic.ttf);
+}
+@font-face{
+	font-family: HallFetica;
+	src: url(../fonts/HallFetica.ttf);
+}
+@font-face{
+	font-family: HallFeticaItalic;
+	src: url(../fonts/HallFeticaItalic.ttf);
+}
+.opacity0{
+	visibility: none;
+	opacity: 1;
+}
+.logo_box{
+	width: 100%;
+	height: 35%;
+	background-color: #fff;
+	position: relative;
+}
+.logo_box img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -325px;
+	margin-top: -56px;
+}
+.logo_box span{
+	font-family: JimbosPrint;
+	font-size: 25px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: 278px;
+	margin-top: 10px;
+}
+.login_box,
+.signUp_box{
+	width: 100%;
+	height: 65%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgb(44,44,44);
+	margin: 0 auto;
+	-webkit-transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	-ms-transition:all .5s ease;
+	-o-transition:all .5s ease;
+	transition:all .5s ease;
+}
+.signUp_box{
+	left: 100%;
+}
+.login_box form{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.login_content{
+	display: block;
+	width: 1000px;
+	height: 400px;
+	position: absolute;
+	left: 50%;
+	margin-left: -395px;
+	top: 50%;
+	margin-top: -210px;
+}
+.login_content li > span{
+	margin: 0;
+	font-size: 25px;
+	line-height: 35px;
+	vertical-align: middle;
+	color: rgb(118,118,118);
+}
+.login_content li > span.login_anno{
+	font-family: HallFeticaItalic;
+}
+.login_content li > span.login_code{
+	font-family: HallFetica;
+}
+.login_content li > span.code_inside{
+	padding-left: 40px;
+}
+.login_content li > span.code_highlight{
+	color: rgb(236,236,236);
+}
+.login_content li > input.login_input{
+	width: 150px;
+	height: 30px;
+	border: 0;
+    outline: 0 none;
+    text-indent: 10px;
+    font-size: 16px;
+    font-weight: bold;
+	-webkit-transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	-ms-transition:all .5s ease;
+	-o-transition:all .5s ease;
+	transition:all .5s ease;
+}
+.login_content li > input.login_input:focus{
+	width: 225px;
+}
+.login_content li > input.login_verify{
+	width: 80px;
+	height: 30px;
+	border: 0;
+    outline: 0 none;
+    text-indent: 10px;
+}
+.login_content img.img_verify{
+	display: inline-block;
+	margin: 0;
+	vertical-align: top;
+	border: 0;
+	outline: 0 none;
+}
+.login_checkbox {
+	width: 20px;
+	display: inline-block;
+	position: relative;
+}
+.login_content li > input.login_submit{
+	background-color: rgb(235,235,214);
+	font-weight: bold;
+	outline: 0 none;
+	border: 0;
+	line-height: 26px;
+	padding: 0 10px;
+	color: black;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+.login_content li span.span_signup{
+	color: rgb(180,180,180);
+	cursor: pointer;
+}
+.login_content li span.span_signup:hover{
+	color: rgb(236,236,236);
+}
+.login_checkbox label {
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 3px;
+	border-radius: 4px;
+
+	-webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	background: #fcfff4;
+
+	background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.login_checkbox label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 4px;
+	left: 4px;
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.login_checkbox label:hover::after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	opacity: 0.5;
+}
+
+.login_checkbox input[type=checkbox]:checked + label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+.head_png,
+.signUp_box form{
+	vertical-align: top;
+	width: 50%;
+	height: 100%;
+	display: inline-block;
+	position: relative;
+}
+.signUp_content{
+	text-align: right;
+	position: absolute;
+	display: block;
+	width: 600px;
+	height: 400px;
+	left: 50%;
+	margin-left: -330px;
+	top: 50%;
+	margin-top: -200px;
+	padding-top: 25px;
+}
+.signUp_content li:not(:first-child){
+	margin-top: 27px;
+	position: relative;
+}
+#errormsg,
+.signUp_content li > span.signUp_item{
+	font-family: HallFetica;
+	margin: 0;
+	font-size: 25px;
+	line-height: 35px;
+	vertical-align: middle;
+	color: rgb(118,118,118);
+}
+#errormsg{
+	color: #df3636;
+}
+.signUp_content li > span.signUp_item:hover{
+	color: rgb(236,236,236);
+}
+.signUp_content li > span.signUp_item:hover + div.input_box,
+.signUp_content li > div.input_box:hover,
+.signUp_content li > div.input_box:focus,
+.signUp_content li > div.signUpBtn:hover{
+	border-color: rgb(236,236,236);
+}
+.signUpBtn,
+.signUp_content li > div.input_box{
+	margin-left: 10px;
+	display: inline-block; 
+	line-height: 33px;
+	width: 250px;
+	-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid rgb(118,118,118);
+    padding: 2px 10px;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+    position: relative;
+}
+.signUp_content li > div.input_box > img{
+	position: absolute;
+	top: 5px;
+	right: -45px;
+	width: 28px;
+	height: 28px;
+}
+#signupverify{
+	width: 150px;
+	margin-right: 11px;
+}
+#signupverify > input{
+	width: 130px;
+}
+.signUp_content li > img{
+	display: inline-block;
+	vertical-align: top;
+}
+.signUp_content li > div.input_box > input{
+	line-height: 25px;
+	width: 230px;
+	padding-top: 5px;
+	border: 0;
+    outline: 0 none;
+    padding-left: 5px;
+    background: rgb(44,44,44);
+    color: rgb(236,236,236);
+    font-size: 20px;
+}
+.signUp_content li > div.signUpBtn{
+	text-align: center;
+	cursor: pointer;
+	color: rgb(118,118,118);
+	font-size: 27px;
+}
+.signUp_content li > div.signUpBtn a{
+	text-decoration: none;
+	font-family: HallFetica; 
+	display: inline-block;
+	line-height: 100%;
+	height: 100%;
+	color: rgb(118,118,118);
+	margin-right: 8px;
+}
+.signUp_content li > div.signUpBtn:hover a,
+.signUp_content li > div.signUpBtn:hover i{
+	color: rgb(236,236,236);
+}
+.head_png img{
+	width: 60%;
+	padding-left: 100px;
+	padding-top: 10%;
+}
+.backtologin{
+	position: absolute;
+	top: 50%;
+	margin-top: -173px;
+	width: 36px;
+	height: 36px;
+	left: 5px;
+	-webkit-transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	-ms-transition:all .5s ease;
+	-o-transition:all .5s ease;
+	transition:all .5s ease;
+}
+.backtologin > img{
+	width: 100%;
+}
+.login_error{
+	padding-left: 9px;
+	display: inline-block;
+	vertical-align: top;
+	width: 400px;
+	height: 35px;
+	line-height: 35px;
+	font-family: HallFetica;
+    font-size: 23px;
+    color: #df3636;
+}
