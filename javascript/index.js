@@ -17,14 +17,16 @@ jQuery(document).ready(function($) {
 	function getNotes(){
 		//当前笔记内容
 		var current_edit = jQuery.parseJSON(store.get("ueditor_preference"));
-		var current_edit_title = '';//title在不同的环境下可能不一样
-		//现在是这样的 {"http_localhost_8088_XM_editor-drafts-data":"<p>正在编辑的笔记内容</p>"}
-		for(var item in current_edit){
-			current_edit_title = item;
+		if(current_edit){
+			var current_edit_title = '';//title在不同的环境下可能不一样
+			//现在是这样的 {"http_localhost_8088_XM_editor-drafts-data":"<p>正在编辑的笔记内容</p>"}
+			for(var item in current_edit){
+				current_edit_title = item;
+			}
+			//取出正在编辑的笔记内容
+			var edit_content = current_edit[current_edit_title];
+			return edit_content.replace(/<\/?[^>]*>/g,'');
 		}
-		//取出正在编辑的笔记内容
-		var edit_content = current_edit[current_edit_title];
-		return edit_content.replace(/<\/?[^>]*>/g,'');
 	}
 	//获得天气数据 需要联网 :(
 	// var weather_json = $('#weather_iframe').contents().find('pre').text();
